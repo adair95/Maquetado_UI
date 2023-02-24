@@ -1,6 +1,7 @@
 package com.example.maquetado
 
 
+import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -80,6 +81,7 @@ private fun home(name: String){
             Text(
                 text = "$name",
                 color = MaterialTheme.colors.primary,
+                style = MaterialTheme.typography.h4,
                 fontFamily = androidx.compose.ui.text.font.FontFamily.Cursive,
             )
 
@@ -102,12 +104,12 @@ private fun home(name: String){
                 
                 Row(modifier = Modifier.align(BottomStart)) {
                     Spacer(modifier = Modifier.width(30.dp))
-                    button(
+                    /*button(
                         "Shop", Modifier.width(100.dp),  ButtonDefaults.buttonColors(
                             backgroundColor = Color.Unspecified,
                             contentColor = Color.White,
 
-                            ),)
+                            ),)*/
 
                    /* button(
                          "Shop", Modifier.width(100.dp),  ButtonDefaults.buttonColors(
@@ -126,22 +128,22 @@ private fun home(name: String){
                             contentColor = Color.White,
                         )
                     )*/
-                   /* Button(onClick = { /*TODO*/ }, shape = RoundedCornerShape(50.dp), modifier = Modifier.width(100.dp),
+                    Button(onClick = { /*TODO*/ }, shape = RoundedCornerShape(50.dp), modifier = Modifier.width(100.dp),
                             colors = ButtonDefaults.buttonColors(
                                 backgroundColor = Color.Red,
                                 contentColor = Color.White)
                         ) {
                         Text(text = "Shop")
 
-                    }*/
+                    }
 
-                   /* Button(onClick = { /*TODO*/ }, shape = RoundedCornerShape(50.dp),
+                   Button(onClick = { /*TODO*/ }, shape = RoundedCornerShape(50.dp),
                         colors = ButtonDefaults.buttonColors(
                             backgroundColor = Color.Unspecified,
                             contentColor = Color.White)
                     ) {
                         Text(text = "Explore")
-                    }*/
+                    }
                     Spacer(modifier = Modifier.height(80.dp))
                 }
             }
